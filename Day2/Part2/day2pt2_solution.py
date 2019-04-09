@@ -9,7 +9,7 @@ mismatch_count = 0
 mismatch_letter = ''
 
 for line in lines:
-    if last == '':
+    if not last:
         last = line
     else:
         for i in range (0,len(line)-1):
