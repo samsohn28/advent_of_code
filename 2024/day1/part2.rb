@@ -1,5 +1,6 @@
 first_list, second_list = File.read("input.txt")
   .lines
+  .map(&:chomp)
   .map { |line| line.split.map(&:to_i) }
   .transpose
 
