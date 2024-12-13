@@ -71,8 +71,8 @@ class CeresSearch
 
   def find_x_mas(row, col)
     DIAGONALS.all? do |(dx1, dy1), (dx2, dy2)|
-      x1, y1 = row + 1 * dx1, col + 1 * dy1
-      x2, y2 = row  + 1 * dx2, col + 1 * dy2
+      x1, y1 = row + dx1, col + dy1
+      x2, y2 = row  + dx2, col + dy2
       [word, word.reverse].include?([grid[x1][y1], grid[row][col], grid[x2][y2]].join)
     end
   end
